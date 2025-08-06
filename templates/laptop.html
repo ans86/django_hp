@@ -7,7 +7,7 @@
   <title>Laptop</title>
 
   {% load static %}
-  <link rel="stylesheet" href="{% static 'game.css' %}">
+  <link rel="stylesheet" href="{% static 'laptop.css' %}">
   <link rel="icon" type="image/x-icon" href="https://live.staticflickr.com/7410/12272594713_fb1db15882_z.jpg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -93,7 +93,7 @@
   <div class="bg-dark text-white p-5 rounded-4 shadow-lg mx-auto" style="max-width: 600px;">
     <h2 class="mb-4 text-center">Laptop Info Form</h2>
 
-    <form method="post" action="{% url 'laptop' %}" enctype="multipart/form-data">
+    <form class="custom-form" method="post" action="{% url 'laptop' %}" enctype="multipart/form-data">
       {% csrf_token %}
 
       <div class="form-floating mb-3">
