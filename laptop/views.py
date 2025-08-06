@@ -20,6 +20,11 @@ def laptop(request):
         )
         laptop_obj.save()
         # Optionally pass a success message
-        return render(request, 'laptop.html', {'message': 'Form submitted successfully!'})
+        return render(request, 'laptop_form.html', {'message': 'Form submitted successfully!'})
     
-    return render(request, 'laptop.html')
+    return render(request, 'laptop_form.html')
+
+
+def laptop_list(request):
+    laptops = Laptop.objects.all().order_by('-timeStamp')  # Latest first
+    return render(request, 'laptops.html', {'laptops': laptops})

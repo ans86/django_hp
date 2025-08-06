@@ -27,6 +27,7 @@ urlpatterns = [
     path('home', views.home_view, name="home"),
     path('about/', views.about_view, name="about"),
     path('form/', views.form_view, name="form" ),
+    path('laptops/', views.laptops_view, name="laptops" ),
     #Contact app urls
     path('contact/', include('contact.urls')),
     path('game/', include('game.urls')),

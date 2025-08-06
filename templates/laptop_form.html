@@ -68,6 +68,9 @@
           <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="{% url 'laptops' %}">Laptops</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="{% url 'about' %}">About</a>
         </li>
         <li class="nav-item">
@@ -118,12 +121,12 @@
 
       <div class="form-floating mb-3">
         <input type="number" class="form-control" name="ram" id="ram" placeholder="Enter RAM">
-        <label for="ram">RAM (in GB)</label>
+        <label for="ram">RAM (GB)</label>
       </div>
 
       <div class="form-floating mb-4">
         <input type="number" class="form-control" name="ssd" id="ssd" placeholder="Enter SSD">
-        <label for="ssd">SSD (in GB)</label>
+        <label for="ssd">SSD (GB)</label>
       </div>
 
       <button type="submit" class="btn btn-primary w-100 py-2">Submit</button>
