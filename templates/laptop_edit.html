@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Laptop Update</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'laptop.css' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <style>
     .car {
@@ -52,7 +54,7 @@
   <h1 style="font-size: 50px; text-align: center;"><b>Edit</b></h1>
 
   <div class="d-flex justify-content-center align-items-center">
-  <form method="POST" action="{% url 'laptop_edit' laptop.id %}" enctype="multipart/form-data" style="width: 50%;">
+  <form class="custom-form" method="POST" action="{% url 'laptop_edit' laptop.id %}" enctype="multipart/form-data" style="width: 50%;">
     {% csrf_token %}
 
     <div class="mb-3">

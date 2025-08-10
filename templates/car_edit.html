@@ -14,39 +14,13 @@
       margin-left: 40%;
       margin-top: 5%;
     }
-
-    .thanks {
-      margin-top: 7%;
-      text-align: center;
-      font-size: 35px;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
   </style>
 </head>
 
-<body style="background-color: #1c1c1e;>
+<body style="background-color: rgb(17, 14, 14);">
 
-  <!-- ✅ Navbar moved inside body -->
-
-<nav class="navbar navbar-expand-lg bg-light navbar-dark fixed-top mb-20">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'cars' %}" class="btn btn-light mb-3"><b> ◀ Back</b></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-
+  <div class="container mt-5">
+<a href="{% url 'cars' %}" class="btn btn-light mb-3">← Back</a>
 
 <!-- Shrink Wrapper -->
 <div style="transform: scale(0.8); transform-origin: top center;">
