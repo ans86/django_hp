@@ -32,7 +32,7 @@
       width: 100%;
       padding: 20px;
     }
-    <style>
+  
   .form-control {
     background-color: #2c2c2e;
     color: #f8f9fa;
@@ -51,10 +51,10 @@
   }
 </style>
 
-  </style>
 </head>
 
 <body>
+
   <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top mb-20">
   <div class="container-fluid">
@@ -74,10 +74,23 @@
           <a class="nav-link active" aria-current="page" href="{% url 'cars' %}">Cars</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">About</a>
+          <a class="nav-link" href="{% url 'books' %}">Books</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'form' %}">Form</a>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'authors' %}">Authors</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Form
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href=" {% url 'contact' %}">Contact</a></li>
+            <li><a class="dropdown-item" href=" {% url 'game' %}">Game</a></li>
+            <li><a class="dropdown-item" href=" {% url 'laptop' %}">Laptop</a></li>
+            <li><a class="dropdown-item" href=" {% url 'car' %}">Car</a></li>
+            <li><a class="dropdown-item" href=" {% url 'book' %}">Book</a></li>
+            <li><a class="dropdown-item" href=" {% url 'author' %}">Author</a></li>
+          </ul>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -94,16 +107,11 @@
 <!-- Shrink Wrapper -->
 <div style="transform: scale(0.8); transform-origin: top center;">
 
-<div class="mt-5 pt-5">
-    <a href="{% url 'contact' %}" class="btn btn-outline-secondary" role="button">Contact</a>
-    <a href="{% url 'game' %}" class="btn btn-outline-secondary" role="button">Game</a>
-    <a href="{% url 'laptop' %}" class="btn btn-outline-secondary" role="button">Laptop</a>
-    <a href="{% url 'car' %}" class="btn btn-outline-secondary" role="button">Car</a>
-  </div>
-
 <!-- Centered & Compact Form -->
 
 <div class="d-flex justify-content-center align-items-center" style="margin-top: 100px;">
+
+
 
     <form class="custom-form" method="post" action="{% url 'laptop' %}" enctype="multipart/form-data">
 

@@ -3,6 +3,10 @@ from django.shortcuts import render
 from game.models import Game
 from laptop.models import Laptop
 from car.models import Car
+from book.models import Book
+from author.models import Author
+
+
 
 def index(request):
     return render(request, 'gam.html')
@@ -37,3 +41,21 @@ def cars_view(request):
         "cars": cars
     }
     return render(request, 'cars.html', context)
+
+def books_view(request):
+    books = Book.objects.all()
+    context = {
+        "books": books
+    }
+    return render(request, 'books.html', context)
+
+
+
+def authors_view(request):
+    authors = Author.objects.all()
+    context = {
+        "authors": authors
+    }
+    return render(request, 'authors.html', context)    
+
+
