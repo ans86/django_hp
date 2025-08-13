@@ -22,12 +22,6 @@ def home_view(request):
     }
     return render(request, 'home.html', context)
 
-def about_view(request):
-     return render(request, 'about.html')
-
-def form_view(request):
-     return render(request, 'form.html')
-
 def laptops_view(request):
     laptops = Laptop.objects.all()
     context = {
